@@ -16,7 +16,8 @@ class  MainScr(Screen):
         v.add_widget(Button(text = 'Экран 3'))
         v.add_widget(Button(text = 'Экран 4'))
         h.add_widget(v)
-
+        self.add_widget(h)
+        
 class  Scr1(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
@@ -28,6 +29,6 @@ class MyApp(App):
     def build(self):
         sm = ScreenManager()
         sm.add_widget(MainScr())
-
+        return sm
 window = MyApp()
 window.run()
