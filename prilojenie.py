@@ -17,18 +17,22 @@ class  MainScr(Screen):
         v.add_widget(Button(text = 'Экран 4'))
         h.add_widget(v)
         self.add_widget(h)
-        
+
 class  Scr1(Screen):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        pass
+        v = BoxLayout(orientation ='vertical', padding = 8, spacing=8)
+        h = BoxLayout(padding = 8, spacing = 8)
+        .add_widget(Button(text = 'Экран 1'))
+        .add_widget(Button(text = 'Экран 2'))
 
         
         
 class MyApp(App):
     def build(self):
         sm = ScreenManager()
-        sm.add_widget(MainScr())
+        # sm.add_widget(MainScr())
+        sm.add_widget(Scr1())
         return sm
 window = MyApp()
 window.run()
